@@ -27,7 +27,6 @@ namespace photo
             }
 
             app.UseRouting();
-
         }
     }
 }
