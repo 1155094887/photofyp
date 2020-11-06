@@ -28,7 +28,6 @@ namespace photo
 
             app.UseRouting();
 
-            app.
         }
     }
 }

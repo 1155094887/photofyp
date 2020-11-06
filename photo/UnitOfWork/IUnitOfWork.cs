@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 using photo.Data;
 
 namespace photo.UnitOfWork
