@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,6 @@ namespace photo.Data
 {
     class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {
-        internal ApplicationContext context;
-
         internal DbSet<TEntity> dbSet;
 
         public void Delete(TEntity entityToDelete)
