@@ -1,49 +1,22 @@
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
+using photo.UnitOfWork;
 
 namespace photo.Data
 {
     class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {
-        internal ApplicationContext context;
+        private readonly IUnitOfWork _unitOfWork;
 
-        internal DbSet<TEntity> dbSet;
-
-        public void Delete(TEntity entityToDelete)
-        {   
-            throw new NotImplementedException();
-        }
-
-        public void Delete(object id)
+        public BaseRepository(IUnitOfWork _unitOfWork)
         {
-            throw new NotImplementedException();
+            this._unitOfWork = _unitOfWork;
         }
 
-        public IEnumerable<TEntity> Get(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, string includeProperties = "")
-        {
-            throw new NotImplementedException();
-        }
 
-        public TEntity GetByID(object id)
-        {
-            throw new NotImplementedException();
-        }
 
-        public IEnumerable<TEntity> GetWithRawSql(string query, params object[] parameters)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Insert(TEntity entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(TEntity entityToUpdate)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
