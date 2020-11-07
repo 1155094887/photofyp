@@ -2,28 +2,42 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
+using photo.UnitOfWork;
 
 namespace photo.Data
 {
     public interface IBaseRepository<TEntity> where TEntity : class
     {
-        void Delete(TEntity entityToDelete);
-        void Delete(object id);
+        /// <summary>
+        /// 新增
+        /// </summary>
+        /// <param name="entity">實體</param>
+        void Add(TEntity entity);
 
-        IEnumerable<TEntity> Get(
-            Expression<Func<TEntity, bool>> filter = null,
-            Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
-            string includeProperties = ""
-        );
+        /// <summary>
+        /// 取得全部
+        /// </summary>
+        /// <returns></returns>
+        Task<ICollection<TEntity>> GetAllAsync();
 
-        TEntity GetByID(object id);
+        /// <summary>
+        /// 取得單筆
+        /// </summary>
+        /// <param name="predicate">查詢條件</param>
+        /// <returns></returns>
+        Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> predicate);
 
-        IEnumerable<TEntity> GetWithRawSql(string query,
+        /// <summary>
+        /// 刪除
+        /// </summary>
+        /// <param name="entity">實體</param>
+        void Remove(TEntity entity);
 
-            params object[] parameters);
-
-        void Insert(TEntity entity);
-
-        void Update(TEntity entityToUpdate);
+        /// <summary>
+        /// 更新
+        /// </summary>
+        /// <param name="entity">實體</param>
+        void Update(TEntity entity);
     }
 }

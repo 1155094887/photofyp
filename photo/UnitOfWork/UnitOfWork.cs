@@ -2,33 +2,41 @@
 using System;
 using System.Collections;
 using System.Data.Entity;
+using System.Threading.Tasks;
 
 namespace photo.UnitOfWork
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly DbContext _context;
-
-        private bool disposed;
-        private Hashtable repositories;
-        public UnitOfWork() 
+        private bool disposed = false;
+        public UnitOfWork(DbContext dBContext) 
         {
-
-    }
-
-        public IBaseRepository<T> BaseRepository<T>() where T : class
-        {
-            throw new NotImplementedException();
+            this.dBContext = dBContext;
         }
+
+        public DbContext dBContext { get; private set; }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            Dispose();
+            GC.SuppressFinalize(this);
         }
 
-        public void save()
+        public async Task<int> save()  
         {
-            throw new NotImplementedException();
+            return await this.dBContext.SaveChangesAsync();
+        }
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!this.disposed)
+            {
+                if (disposing)
+                {
+                    this.dBContext.Dispose();
+                    this.dBContext = null;
+                }
+            }
+            this.disposed = true;
         }
     }
 }
