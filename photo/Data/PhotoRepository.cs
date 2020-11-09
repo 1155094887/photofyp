@@ -9,20 +9,21 @@ namespace photo.Data
 {
     public class PhotoRepository : IPhotoRepository
     {
+        private readonly PhotoContext _context;
+
+        public PhotoRepository(PhotoContext context)
+        {
+            _context = context;
+        }
         public Photo GetPhotoById(int id)
         {
-            return new Photo { Id = 1,Name = "aaa", Description = "sss",Url = "alpa" };
+            return _context.Photos.AsQueryable().Where(x => x.Id == id).FirstOrDefault();
         }
 
-        public IEnumerable<Photo> GetAllPhotos()
+        public IQueryable<Photo> GetAllPhotos()
         {
-            var photo = new List<Photo>
-            {
-                new Photo{Id = 1,Name = "d",Description = "vdv",Url = "url"},
-                new Photo{Id = 2,Name = "e",Description = "aaa",Url = "aaa"},
-                new Photo{Id = 3,Name = "z",Description = "assa",Url = "asa"}
-            };
-            return photo;
+            //can get with predicate
+            return _context.Photos.AsQueryable();
         }
     }
 }
