@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Bn0ch5F4keH2ISMs81NFjp5jRQhh06Qa+DYbkLnwXPanOrHJMtDqAGcqinVH+JqGrOhazPklCUoXjMMubcm39Q==",
+  "dgSpecHash": "ylLqUgiu8hmJ/y8ZeVM0wXPdDA5YZPIIZblawccjgJc5nlfjMeM38Y9OZZ/5gdoau7F486zMXk9rsed56a4VSQ==",
   "success": true,
   "projectFilePath": "F:\\VSWorkspace\\tomilia\\photofyp\\photo\\photo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tomilia\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\tomilia\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
     "C:\\Users\\tomilia\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\tomilia\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\tomilia\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
