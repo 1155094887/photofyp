@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\VSWorkspace\\tomilia\\photofyp\\photo\\photo.csproj": {}
+    "C:\\Workspace\\photo\\photo\\photo.csproj": {}
   },
   "projects": {
-    "F:\\VSWorkspace\\tomilia\\photofyp\\photo\\photo.csproj": {
+    "C:\\Workspace\\photo\\photo\\photo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\VSWorkspace\\tomilia\\photofyp\\photo\\photo.csproj",
+        "projectUniqueName": "C:\\Workspace\\photo\\photo\\photo.csproj",
         "projectName": "photo",
-        "projectPath": "F:\\VSWorkspace\\tomilia\\photofyp\\photo\\photo.csproj",
-        "packagesPath": "C:\\Users\\tomilia\\.nuget\\packages\\",
-        "outputPath": "F:\\VSWorkspace\\tomilia\\photofyp\\photo\\obj\\",
+        "projectPath": "C:\\Workspace\\photo\\photo\\photo.csproj",
+        "packagesPath": "C:\\Users\\tommy.lee\\.nuget\\packages\\",
+        "outputPath": "C:\\Workspace\\photo\\photo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\tomilia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tommy.lee\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,6 +65,18 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.9, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[5.6.3, )"
             }
           },
           "imports": [
