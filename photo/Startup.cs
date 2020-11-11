@@ -30,6 +30,7 @@ namespace photo
         {
             services.AddDbContext<PhotoContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("DatabaseConn")));
             services.AddControllers();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddScoped<IPhotoRepository, PhotoRepository>();
             services.AddSwaggerGen(c =>
             {

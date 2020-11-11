@@ -6278,19 +6278,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tommy.lee\\.nuget\\packages\\": {}
+    "C:\\Users\\tomilia\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Workspace\\photo\\photo\\photo.csproj",
+      "projectUniqueName": "F:\\VSWorkspace\\tomilia\\photofyp\\photo\\photo.csproj",
       "projectName": "photo",
-      "projectPath": "C:\\Workspace\\photo\\photo\\photo.csproj",
-      "packagesPath": "C:\\Users\\tommy.lee\\.nuget\\packages\\",
-      "outputPath": "C:\\Workspace\\photo\\photo\\obj\\",
+      "projectPath": "F:\\VSWorkspace\\tomilia\\photofyp\\photo\\photo.csproj",
+      "packagesPath": "C:\\Users\\tomilia\\.nuget\\packages\\",
+      "outputPath": "F:\\VSWorkspace\\tomilia\\photofyp\\photo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\tommy.lee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tomilia\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

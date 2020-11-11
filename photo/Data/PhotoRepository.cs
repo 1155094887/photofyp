@@ -15,7 +15,7 @@ namespace photo.Data
         {
             _context = context;
         }
-        public Photo GetPhotoById(int id)
+        public Photo GetAllPhotosByUserId(int id)
         {
             return _context.Photos.AsQueryable().Where(x => x.Id == id).FirstOrDefault();
         }
@@ -24,6 +24,28 @@ namespace photo.Data
         {
             //can get with predicate
             return _context.Photos.AsQueryable();
+        }
+
+        public bool SaveChanges()
+        {
+            return _context.SaveChanges() >= 0;
+        }
+
+        public IQueryable<Photo> GetAllPhotosByUserId()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Photo GetPhotoById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddPhoto(Photo photo)
+        {
+            if (photo == null)
+                throw new ArgumentNullException(nameof(photo));
+            _context.Add(photo);
         }
     }
 }

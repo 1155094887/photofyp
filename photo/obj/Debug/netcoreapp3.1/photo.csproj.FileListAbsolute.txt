@@ -189,3 +189,13 @@ C:\Workspace\photo\photo\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.
 C:\Workspace\photo\photo\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Workspace\photo\photo\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Workspace\photo\photo\obj\Debug\netcoreapp3.1\photo.MvcApplicationPartsAssemblyInfo.cs
+C:\Workspace\photo\photo\netcoreapp3.1\appsettings.Development.json
+C:\Workspace\photo\photo\netcoreapp3.1\appsettings.json
+C:\Workspace\photo\photo\netcoreapp3.1\photo.exe
+C:\Workspace\photo\photo\netcoreapp3.1\photo.deps.json
+C:\Workspace\photo\photo\netcoreapp3.1\photo.runtimeconfig.json
+C:\Workspace\photo\photo\netcoreapp3.1\photo.runtimeconfig.dev.json
+C:\Workspace\photo\photo\netcoreapp3.1\photo.dll
+C:\Workspace\photo\photo\netcoreapp3.1\photo.pdb
+C:\Workspace\photo\photo\netcoreapp3.1\photo.xml
+F:\VSWorkspace\tomilia\photofyp\photo\obj\Debug\netcoreapp3.1\photo.MvcApplicationPartsAssemblyInfo.cs
