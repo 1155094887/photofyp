@@ -22,6 +22,14 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
+    },
+    "photo 192.168.1.180": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "applicationUrl": "https://192.168.1.180:13585;http://192.168.1.180:13584",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
     }
   }
 }

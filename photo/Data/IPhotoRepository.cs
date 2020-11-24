@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using photo.Dto;
 using photo.Models;
 
 namespace photo.Data
@@ -8,10 +9,11 @@ namespace photo.Data
     public interface IPhotoRepository
     {
         bool SaveChanges();
-        public IQueryable<Photo> GetAllPhotos();
-        public IQueryable<Photo> GetAllPhotosByUserId();
+        public IQueryable<Photo> GetAllPhotosById(int id);
+        public User GetProfileDesp(int id);
         public Photo GetPhotoById(int id);
 
         public void AddPhoto(Photo photo);
+        public void AddPhotoByUser(PhotoAddRt photo);
     }
 }

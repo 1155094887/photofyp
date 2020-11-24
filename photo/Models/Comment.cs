@@ -6,17 +6,15 @@ using System.Threading.Tasks;
 
 namespace photo.Models
 {
-    public class User
+    public class Comment
     {
         [Key]
-        public int Id { get; set; }
+        public int PhotoId { get; set; }
         [Required]
-        public string Username { get; set; }
+        public string UserId { get; set; }
         [Required]
-        public string Name { get; set; }
+        public string UserName { get; set; }
         [Required]
-        public string Password { get; set; }
-        [Required]
-        public string JoinDate { get; set; }
+        public string Content { get; set; }
     }
 }

@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace photo.Dto
 {
-    public class PhotoAddRt
+    public class Follow
     {
+        [Key]
+        public int FollowingId { get; set; }
         [Required]
-        public string Name { get; set; }
-        public string Description { get; set; }
-        [Required]
-        public string Url { get; set; }
-        
+        public string FollowerName { get; set; }
     }
 }

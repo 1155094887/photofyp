@@ -1,14 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using photo.Data;
 using photo.Dto;
 using photo.Models;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
 
 namespace photo.Controllers
 {
-    [Route("api/photo")]
+    [Route("api/user")]
     [ApiController]
     public class PhotoController : ControllerBase
     {
@@ -24,17 +28,19 @@ namespace photo.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<PhotoGetRp>> GetAllPhotos()
         {
-            var all_photo = _photoRepository.GetAllPhotos();
-            return Ok(_mapper.Map<IEnumerable<PhotoGetRp>>(all_photo));
+            return Ok();
         }
         //get photo by id
         [HttpGet("{id}")]
-        public ActionResult<PhotoGetRp> GetPhotoById(int id)
+        public ActionResult<UserRt> GetAllProfileByUserId(int id)
         {
-            var photo = _photoRepository.GetPhotoById(id);
-            if (photo == null)
+            var user = _photoRepository.GetProfileDesp(id);
+            IQueryable<Photo> photos = _photoRepository.GetAllPhotosById(id);
+            var rt_photo = _mapper.Map<List<PhotoGetRt>>(photos);
+            UserRt userRp = new UserRt { Name = user.Name, Photos = rt_photo };
+            if (photos == null)
                 return NotFound();
-            return _mapper.Map<PhotoGetRp>(photo);
+            return userRp;
         }
         //post photo api
         //should return rp
@@ -45,6 +51,18 @@ namespace photo.Controllers
             _photoRepository.SaveChanges();
 
             return Ok(_mapper.Map<PhotoAddRp>(photo));
+        }
+        [HttpPost]
+        public ActionResult<char> UploadPhoto([FromForm]PhotoAddRt form)
+        {
+            //save photo
+            var photo = _mapper.Map<Photo>(form);
+            //hardcode
+            photo.ByUserId = 1;
+            _photoRepository.AddPhoto(photo);
+            _photoRepository.SaveChanges();
+
+            return 'a';
         }
     }
 }

@@ -1,18 +1,17 @@
-﻿using System;
+﻿using photo.Dto;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace photo.Dto
+namespace photo.Models
 {
-    public class PhotoAddRt
+    public class UserDetail
     {
         [Required]
         public string Name { get; set; }
-        public string Description { get; set; }
-        [Required]
-        public string Url { get; set; }
-        
+
+        public List<Photo> PhotoList { get; set; }
     }
 }

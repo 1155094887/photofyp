@@ -12,7 +12,8 @@ namespace photo.sProfile
     {
         public PhotoProfile()
         {
-            CreateMap<Photo, PhotoGetRp>();
+            CreateMap<Photo, PhotoGetRt>();
+            CreateMap<Photo, PhotoAddRt>();
             CreateMap<Photo, PhotoAddRp>();
             CreateMap<PhotoAddRt, Photo>();
         }

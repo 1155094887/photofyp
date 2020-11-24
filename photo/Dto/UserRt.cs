@@ -1,18 +1,17 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace photo.Dto
 {
-    public class PhotoAddRt
+    [JsonObject(MemberSerialization.OptOut)]
+    public class UserRt
     {
-        [Required]
         public string Name { get; set; }
-        public string Description { get; set; }
-        [Required]
-        public string Url { get; set; }
-        
+        public List<PhotoGetRt> Photos { get; set; }
     }
 }
